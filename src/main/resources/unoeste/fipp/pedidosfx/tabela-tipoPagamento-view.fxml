@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="500.0" prefWidth="900.0" styleClass="background-pagina" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unoeste.fipp.pedidosfx.TabelaTipoPagamentoController">
+   <children>
+      <HBox>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipos de pagamento" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="16.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ff9d00;" styleClass="hbox-bordas">
+         <children>
+            <TextField fx:id="tfPesquisar" onKeyReleased="#onPesquisar" prefHeight="26.0" prefWidth="594.0" promptText="Informe o nome do tipo de pagamento" styleClass="text-field-editavel" />
+            <Separator orientation="VERTICAL" />
+            <Button mnemonicParsing="false" onAction="#onNovoTipoPagamento" style="-fx-font-weight: 100;" styleClass="button-confirmar" text="Cadastrar novo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="tableView" styleClass="table">
+        <columns>
+          <TableColumn fx:id="coId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="coNome" prefWidth="299.1999740600586" text="Nome" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onAlterar" text="Alterar" />
+                  <MenuItem mnemonicParsing="false" onAction="#onApagar" text="Apagar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

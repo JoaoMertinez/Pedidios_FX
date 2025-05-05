@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="424.0" prefWidth="640.0" styleClass="background-pagina" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unoeste.fipp.pedidosfx.FormProdutosController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-titulo" text="Produto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="16.0" />
+         </VBox.margin>
+      </Text>
+      <Label text="ID" />
+      <TextField fx:id="tfId" editable="false" styleClass="text-field-nao-editavel" />
+      <Label layoutX="10.0" layoutY="10.0" text="Nome">
+         <VBox.margin>
+            <Insets top="16.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="tfNome" layoutX="10.0" layoutY="27.0" styleClass="text-field-editavel" />
+      <Label text="Descrição">
+         <VBox.margin>
+            <Insets top="16.0" />
+         </VBox.margin>
+      </Label>
+      <TextArea fx:id="taDescr" prefHeight="69.0" prefWidth="640.0" styleClass="text-field-editavel" />
+      <Label layoutX="10.0" layoutY="10.0" text="Valor">
+         <VBox.margin>
+            <Insets top="16.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="tfValor" layoutX="10.0" layoutY="27.0" styleClass="text-field-editavel" />
+      <Label text="Categoria">
+         <VBox.margin>
+            <Insets top="16.0" />
+         </VBox.margin>
+      </Label>
+      <ComboBox fx:id="cbCategoria" prefHeight="25.0" prefWidth="640.0" styleClass="combo-box" />
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" spacing="36.0">
+         <VBox.margin>
+            <Insets top="36.0" />
+         </VBox.margin>
+         <children>
+            <Button mnemonicParsing="false" onAction="#onConfirmar" prefHeight="32.0" prefWidth="100.0" text="Confirmar" textFill="#fcfcfc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-bordas" />
+                  <String fx:value="button-confirmar" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onCancelar" prefHeight="32.0" prefWidth="100.0" text="Cancelar" textFill="#fcfcfc">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-bordas" />
+                  <String fx:value="button-cancelar" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <effect>
+      <DropShadow height="64.96" radius="27.585" spread="0.17" width="47.38" />
+   </effect>
+</VBox>

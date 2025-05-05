@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="500.0" prefWidth="900.0" styleClass="background-pagina" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unoeste.fipp.pedidosfx.TabelaPedidosController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-titulo" text="Pedidos">
+         <VBox.margin>
+            <Insets bottom="16.0" />
+         </VBox.margin></Text>
+      <TableView fx:id="tableView" prefHeight="411.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="coId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="coData" maxWidth="100.0" prefWidth="100.0" text="Data" />
+            <TableColumn fx:id="coCliente" maxWidth="200.0" prefWidth="200.0" text="Cliente" />
+            <TableColumn fx:id="coTotal" maxWidth="200.0" prefWidth="200.0" text="Total" />
+            <TableColumn fx:id="coViagem" maxWidth="200.0" prefWidth="200.0" text="Viagem" />
+            <TableColumn fx:id="coTipoPagamento" maxWidth="200.0" prefWidth="200.0" text="Tipo de pagamento" />
+            <TableColumn fx:id="coTelefone" maxWidth="200.0" prefWidth="200.0" text="Telefone" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onApagar" text="Apagar" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAlterar" text="Alterar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

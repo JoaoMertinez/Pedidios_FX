@@ -1,0 +1,67 @@
+.text-field-editavel {
+    -fx-background-color: white;
+    -fx-border-color: #ff9d00;
+    -fx-border-width: 1;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.text-field-nao-editavel {
+    -fx-background-color: #edeceb;
+    -fx-background-radius: 6px;
+}
+
+.combo-box {
+    -fx-background-color: #fff8f2;
+    -fx-border-color: #ff9d00;
+    -fx-border-width: 1;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.check-box {
+    -fx-color: white;
+}
+
+.hbox-bordas {
+    -fx-background-radius: 6px;
+
+}
+
+.button-bordas {
+    -fx-background-radius: 6px;
+}
+
+.botao-selecionar-adicionar {
+    -fx-background-color: #edeceb;
+}
+
+.table {
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-background-color: white;
+    -fx-border-color: #ff9d00;
+}
+
+.button-confirmar {
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-background-color: #005eff;
+    -fx-font-weight: bold;
+}
+
+.button-cancelar {
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -fx-background-color: #f65454;
+    -fx-font-weight: bold;
+}
+
+.text-titulo {
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+}
+
+.background-pagina {
+    -fx-background-color: #fff6e8;
+}
